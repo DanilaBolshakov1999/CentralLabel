@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bsb-Pl-JYb">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="YaD-Ag-gyp">
+            <objects>
+                <viewController id="bsb-Pl-JYb" customClass="MainViewController" customModule="CenterLabel" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QfN-Ow-Stj">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="O33-nq-M8f">
+                                <rect key="frame" x="145" y="330.66666666666669" width="140" height="271.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1W-hz-bup">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Ibw-AO-Vau"/>
+                                            <constraint firstAttribute="width" constant="140" id="Xwl-Mk-bzJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-qf-QKg">
+                                        <rect key="frame" x="4" y="152" width="132.33333333333334" height="26.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFH-lJ-vle">
+                                        <rect key="frame" x="7.6666666666666572" y="190.33333333333331" width="125" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show answer"/>
+                                        <connections>
+                                            <action selector="showAnswerButtonDidPressed:" destination="bsb-Pl-JYb" eventType="touchUpInside" id="k06-1y-Sg3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-ct-ggk">
+                                        <rect key="frame" x="7.3333333333333357" y="236.66666666666669" width="125.33333333333331" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next element"/>
+                                        <connections>
+                                            <action selector="nextElementDidPressed:" destination="bsb-Pl-JYb" eventType="touchUpInside" id="qGs-rT-Tln"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LAP-NY-NvG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O33-nq-M8f" firstAttribute="centerY" secondItem="QfN-Ow-Stj" secondAttribute="centerY" id="GQ3-k5-POW"/>
+                            <constraint firstItem="O33-nq-M8f" firstAttribute="centerX" secondItem="QfN-Ow-Stj" secondAttribute="centerX" id="j9p-er-dvd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="hMO-qf-QKg" id="9cp-QY-I7M"/>
+                        <outlet property="imageView" destination="Y1W-hz-bup" id="NLf-M5-cJQ"/>
+                        <outlet property="view" destination="QfN-Ow-Stj" id="Ons-no-reA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CiD-ao-ruU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313.95348837209303" y="-79.184549356223187"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
